@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Virtual</title>
+  <link rel="shortcut icon" href="img/3702390_letter_mail_news_newsletter_sale_icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+
+  <main>
+  <center><h1>banca de jornais</h1></center>
+  
+  <div class="product-selection">
+    <label for="productType">Selecione o tipo de produto:</label>
+    <select id="productType">
+      <option value="jornais">Jornais</option>
+      <option value="revistas">Revistas</option>
+      <option value="livros">Livros</option>
+      <option value="discos">Discos</option>
+    </select>
+    <br>
+    <label for="quantity">Quantidade:</label>
+    <input type="number" id="quantity" min="1" value="1">
+    <br>
+    <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+  </div>
+  
+  <div class="product-details" id="productDetails">
+    <h2>Detalhes do Produto</h2>
+    <p>Tipo: <span id="productTypeDetail"></span></p>
+    <p>Preço Unitário: <span id="unitPriceDetail"></span></p>
+  </div>
+  
+  <div class="cart" id="cart">
+    <h2>Carrinho de Compras</h2>
+    <ul id="cartItems"></ul>
+    <p id="cartTotal">Total: R$ 0,00</p>
+    <button onclick="limparCarrinho()">Limpar Carrinho</button>
+  </div>
+
+</main>
+</body>
+</html>
